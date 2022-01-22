@@ -11,7 +11,7 @@ from selenium import webdriver
 from tkinter import *
 import webbrowser
 
-DRIVER_PATH=str(Path('chromedriver.exe').resolve())
+DRIVER_PATH=str(Path('E:\DRIVE\C_C++\pricecomparison\chromedriver.exe').resolve())
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36."}
 
 def flipbut():
