@@ -11,7 +11,7 @@ from selenium import webdriver
 from tkinter import *
 import webbrowser
 
-DRIVER_PATH=str(Path('E:\DRIVE\C_C++\pricecomparison\chromedriver.exe').resolve())
+DRIVER_PATH=str(Path('chromedriver.exe').resolve())
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36."}
 
 def flipbut():
@@ -70,10 +70,12 @@ def spawn():
     exit_button=Button(root,text = 'EXIT', command = lambda: close())
     exit_button.grid(row=7,column=20,padx=40,ipadx=25)
 def reset():
+    #***********THIS FUNCTION IS FOR RESET***********
     root.destroy()
     spawn()
     
 def Imp(name):
+    #***********THIS FUNCTION IS IMPORTANT************
     global flipkart_link
     global amazon_link
 
@@ -82,12 +84,12 @@ def Imp(name):
     amazon_link = (f"https://www.amazon.in/s?k={name}&crid=2HPXEJMH5RRW7&sprefix={name}%2Caps%2C204&ref=nb_sb_noss_2")
 
 def flipkart():
-    
+    #***********THIS FUNCTION IS FOR FLIPKART SCRAPPING************ 
     URL=flipkart_link
     page = requests.get(URL, headers=HEADERS)
 
 
-
+    #***********CREATING SOUP***************
     soup = BeautifulSoup(page.content,'html.parser')
 
 
@@ -133,6 +135,7 @@ def flipkart():
         FLIPKARTTITLE.append(INFO[i][0])
         FLIPKARTPRICE.append(INFO[i][1])
 def get_html(url):
+    #***********THIS FUNCTION IS FOR STARTING SELENIUM FOR AMAZON************
     global dropctr
     dropctr=0
     op = webdriver.ChromeOptions()
@@ -142,6 +145,7 @@ def get_html(url):
     return browser.page_source
 
 def amazon():
+    #***********THIS FUNCTION IS FOR AMAZON***********
     URL = amazon_link
     amazon_home ='https://www.amazon.in'
     html= get_html(URL)
@@ -206,7 +210,8 @@ def amazon():
         # print(items[i])
         AMAZONTITLE.append(items[i][0])
         AMAZONPRICE.append(items[i][1])
-def submit():
+def submit():'
+    #***********THIS FUNCTION IS FOR SUBMIT BUTTON**************
     global FLIPKARTTITLE
     global FLIPKARTPRICE
     global AMAZONTITLE
@@ -282,7 +287,7 @@ def submit():
     print(AMAZONTITLE)
 
 def compare():
-    
+    #***********THIS FUNCTION IS FOR CAMPARE BUTTON************
     global comparison
     comparison=Toplevel(root)
     comparison.geometry('700x500')
