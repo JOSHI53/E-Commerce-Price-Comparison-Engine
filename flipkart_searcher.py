@@ -1,24 +1,25 @@
+#THE CODE WRITTEN HERE IS OF THE FLIPKART.
+#USED BEAUTIFUL SOUP HERE.
+
 import requests
 from bs4 import BeautifulSoup
 import re
 
-
-# s1Q9rs #_1fQZEK
+# THE TWO TYPES OF CLASSES IN FLIPKART ARE :  s1Q9rs #_1fQZEK
 name=str(input("Enter item to search: "))
 
 
 name=name.replace(' ','+')
 flip = (f"https://www.flipkart.com/search?q={name}&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off")
+
+#DONT FORGET TO CHECK FOR YOUR OWN HEADER FILE AS IT MIGHT BE DIFFRENT FOR YOU.
+
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36."}
 def flipkart():
     URL=flip
     page = requests.get(URL, headers=HEADERS)
 
-
-
     soup = BeautifulSoup(page.content,'html.parser')
-
-
 
     fin = re.compile(r'href\s?=\s?[\'"]?([^\'" >]+)')
     chck = soup.find_all('a', attrs={'target': '_blank', 'class': '_1fQZEK'})
