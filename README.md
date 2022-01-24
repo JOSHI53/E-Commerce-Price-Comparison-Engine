@@ -4,10 +4,11 @@
   
 TEAM MEMBERS:
 
+  LAKSHAY BHARADWAJ -- https://github.com/JOSHI53
+  
   SHREEMANTO LAHIRI -- https://github.com/shreemantolahiri
       
-  LAKSHAY BHARADWAJ -- https://github.com/JOSHI53
-
+  
 Hello! This is a project made for comparing prices of products on AMAZON and FLIPKART.
 
 You can use this application to compare any product.
