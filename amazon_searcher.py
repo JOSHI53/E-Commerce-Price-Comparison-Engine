@@ -1,13 +1,13 @@
+#THE CODE WRITTEN IN THIS FILE IS FOR AMAZON WEB SCRAPPING BE CAREFUL WHILE USING THE CODE.
+#THE SELENIUM IS USED AS IT WAS BETTER OPTION THAN BEAUTIFUL SOUP,BUT WE ALSO USED SOME PARTS OF IT.
 from pathlib import Path
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
-
-
 name=str(input("Enter item to search: "))
 name=name.replace(' ','+')
 amazon_link = (f"https://www.amazon.in/s?k={name}&crid=2HPXEJMH5RRW7&sprefix={name}%2Caps%2C204&ref=nb_sb_noss_2")
-DRIVER_PATH=str(Path('chromedriver').resolve())
+DRIVER_PATH=str(Path('chromedriver.exe').resolve())
 def get_html(url):
     op = webdriver.ChromeOptions()
     op.add_argument('headless')
