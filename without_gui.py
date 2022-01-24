@@ -20,6 +20,7 @@ amazon_link = (f"https://www.amazon.in/s?k={name}&crid=2HPXEJMH5RRW7&sprefix={na
 
 #IF THERE IS AN ERROR YOU MIGHT TRY CHANGING THE CHROME DRIVER PATH TO THE PATH WHERE YOUR CHROME DRIVER IS.
 DRIVER_PATH=str(Path('chromedriver').resolve())
+#YOU MIGHT NEED TO CHANGE THE HEADER FILE.
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36."}
 #HERE IS THE AMAZON AND FLIPKART FUNCTION.
 
