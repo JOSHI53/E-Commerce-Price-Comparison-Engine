@@ -1,4 +1,5 @@
-
+#THIS IS THE MAIN FILE BUT WITHOUT GUI IF YOU WANT TO CREATE YOUR OWN GUI YOU CAN USE THIS CODE AND CREATE PERSONAL USER INTERFACE AS YOUR WISH.
+#THIS HAS BOTH THE FUNTIONS OF THE WEBSITE i.e. FLIPKART AND AMAZON.
 import requests
 from bs4 import BeautifulSoup
 import re
@@ -17,9 +18,11 @@ flipkart_link = (f"https://www.flipkart.com/search?q={name}&otracker=search&otra
 
 amazon_link = (f"https://www.amazon.in/s?k={name}&crid=2HPXEJMH5RRW7&sprefix={name}%2Caps%2C204&ref=nb_sb_noss_2")
 
-
+#IF THERE IS AN ERROR YOU MIGHT TRY CHANGING THE CHROME DRIVER PATH TO THE PATH WHERE YOUR CHROME DRIVER IS.
 DRIVER_PATH=str(Path('chromedriver').resolve())
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36."}
+#HERE IS THE AMAZON AND FLIPKART FUNCTION.
+
 def flipkart():
     URL=flipkart_link
     page = requests.get(URL, headers=HEADERS)
