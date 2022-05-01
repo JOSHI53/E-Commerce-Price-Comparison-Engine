@@ -63,6 +63,9 @@ To Exit, use **```EXIT```** Button.
 * The following file is the raw main file without the Tkinter-GUI, which runs only on python terminal:
 
   [without_gui.py](https://github.com/shreemantolahiri/E-Commerce-Price-Comparison-Engine/blob/main/without_gui.py)
+  
+* There might be error if your chromedriver dont match the lataest version.
+  [Download it from here](https://chromedriver.chromium.org/downloads)
 
 Hope you liked our tool.
 
