@@ -44,6 +44,10 @@ Or you can press **```CLOSE```** if you want to close the Compare window.
 
 To Exit, use **```EXIT```** Button.
 
+## Run the exe file 
+* There is an exe file use that to run the application.
+
+  [Executable File](https://github.com/JOSHI53/E-Commerce-Price-Comparison-Engine/blob/main/main.py)
 ## Run the script
 * Install dependencies: ```pip install -r requirement.txt``` in your cmd.
 
